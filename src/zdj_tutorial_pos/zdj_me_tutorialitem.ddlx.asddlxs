@@ -1,0 +1,64 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+        typeName: 'Item',
+        typeNamePlural: 'Items',
+        title:{
+            value: 'Description',
+            type: #STANDARD
+        },
+        description:{
+            value: 'Item',
+            type: #STANDARD
+        }
+  }
+}
+@UI.chart: [
+  {
+    title: 'Column chart for shape',
+    chartType: #COLUMN,
+    measures: [
+      'PRICE'
+    ],
+    dimensions: [
+       'DESCRIPTION'
+    ]
+  }
+]
+
+annotate entity ZDJ_C_TutorialItem with
+{
+  @UI.facet: [
+      { id: 'itemdetails', purpose: #STANDARD, position: 1, type : #FIELDGROUP_REFERENCE, targetQualifier: 'itemdetails' },
+      { targetQualifier: 'price', type: #DATAPOINT_REFERENCE, purpose: #HEADER }
+  ]
+
+
+  @UI.lineItem: [{ position: 10 }]
+  @EndUserText.label: 'Item'
+  Item;
+  @UI.fieldGroup: [{ qualifier: 'itemdetails' , position: 20 }]
+  @UI.lineItem: [{ position: 20 }]
+  Description;
+  @UI.fieldGroup: [{ qualifier: 'itemdetails' , position: 30 }]
+  @UI.lineItem: [{ position: 30 }]
+  @EndUserText.label: 'Quantity'
+  Quantity;
+  @Consumption.valueHelpDefinition: [{ entity:{ name: 'I_CurrencyStdVH', element: 'Currency' } }]
+  
+  Currency;
+  @Consumption.valueHelpDefinition: [{ entity:{ name: 'I_UnitOfMeasureStdVH', element: 'UnitOfMeasure' } }]
+  Unit;
+  @UI.fieldGroup: [{ qualifier: 'itemdetails' , position: 40 }]
+  @UI.lineItem: [{ position: 60 }]
+  @EndUserText.label: 'Unit Price'
+  
+  UnitPrice;
+  @UI.dataPoint:{
+    title: 'Price',
+    qualifier: 'price'
+  }
+  @UI.lineItem: [{ position: 70 }]
+  @EndUserText.label: 'Price'
+  Price;
+}

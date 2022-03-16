@@ -1,0 +1,81 @@
+@Metadata.layer: #CORE
+@Search.searchable: true
+@UI: {
+  headerInfo: {
+        typeName: 'Receipt',
+        typeNamePlural: 'Receipts',
+        title:{
+            value: 'Description',
+            type: #STANDARD
+        },
+        description:{
+            value: 'Id',
+            type: #STANDARD
+        },
+        imageUrl: 'PictureURL'
+  },
+  presentationVariant: [{
+    requestAtLeast: ['ModifiedAt'], 
+    sortOrder: [{ 
+        by: 'ModifiedAt', 
+        direction:  #DESC 
+    }], 
+    visualizations: [{type: #AS_LINEITEM}] 
+  }]
+
+}
+annotate entity ZDJ_C_TutorialHeader with
+{
+  @UI.facet: [
+    { id: 'details', purpose: #STANDARD, label: 'Details' , position: 2, type : #FIELDGROUP_REFERENCE, targetQualifier: 'details' },
+    { id: 'control', purpose: #HEADER, position: 3, type : #FIELDGROUP_REFERENCE,targetQualifier: 'control' },
+    { id: 'items', purpose: #STANDARD, label:'Items', position: 4, type : #LINEITEM_REFERENCE, targetElement: '_Items' }
+  ]
+  @UI.identification: [{ type: #FOR_ACTION, dataAction: 'changeDescription', label: 'Change Description' },{ type: #FOR_ACTION, dataAction: 'cancel', label: 'Cancel' }]
+  @UI.lineItem: [{ position: 10, criticality: 'Criticality' }]
+  @Search.defaultSearchElement: true
+  @Search.fuzzinessThreshold: 0.5
+  Id;
+  @UI.lineItem: [{ position: 20 }]
+  @Search.defaultSearchElement: true
+  @Search.fuzzinessThreshold: 0.7
+  Description;
+  @UI.fieldGroup: [{ qualifier: 'details' , position: 10 }]
+  @EndUserText.label: 'Currency'
+  @UI.selectionField: [{position: 20}]
+  @Consumption.valueHelpDefinition: [{ entity:{ name: 'I_CurrencyStdVH', element: 'Currency' } }]
+  Currency;
+  @UI.lineItem: [{ position: 30 }]
+  @EndUserText.label: 'Customer'
+  @Search.defaultSearchElement: true
+  @Search.fuzzinessThreshold: 0.7
+  Customer;
+  @UI.fieldGroup: [{ qualifier: 'details' , position: 30 }]
+  @UI.selectionField: [{position: 30}]
+  @Consumption.valueHelpDefinition: [{ entity:{ name: 'ZDJ_I_TutposStatusVH', element: 'Code' } }]
+  Status;
+  @UI.fieldGroup: [{ qualifier: 'control' , position: 10 }]
+  @EndUserText.label: 'Created By'
+  Creator;
+  @UI.fieldGroup: [{ qualifier: 'control' , position: 20 }]
+  @EndUserText.label: 'Created At'
+  CreatedAt;
+  @UI.fieldGroup: [{ qualifier: 'control' , position: 30 }]
+  @EndUserText.label: 'Modified By'
+  Modificator;
+  @UI.fieldGroup: [{ qualifier: 'control' , position: 40 }]
+  @UI.lineItem: [{ position: 99 }]
+  @EndUserText.label: 'Modified At'
+  @UI.selectionField: [{position: 10}]
+  ModifiedAt;
+  @UI.fieldGroup: [{ qualifier: 'details' , position: 20 }]
+  @EndUserText.label: 'Overall Price'
+  OverallPrice;
+  @UI.lineItem: [{ position: 40 }]
+  @EndUserText.label: 'Status Description'
+  StatusText;
+  @UI.hidden: true
+  Criticality;
+  @UI.lineItem: [{ importance: #HIGH }]
+  PictureURL;
+}

@@ -1,0 +1,8 @@
+@EndUserText.label: 'Receipt Service Definition'
+define service ZDJ_UI_TUTPOS {
+  expose ZDJ_C_TutorialHeader;
+  expose ZDJ_C_TutorialItem;
+  expose ZDJ_I_TutposStatus;
+  expose I_UnitOfMeasure;
+  expose I_Currency;
+}

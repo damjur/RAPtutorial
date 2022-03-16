@@ -1,0 +1,34 @@
+projection;
+strict;
+use draft;
+
+define behavior for ZDJ_C_TutorialHeader
+ alias Header
+ use etag
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Activate;
+  use action Discard;
+  use action Edit;
+  use action Prepare;
+  use action Resume;
+
+  use action cancel;
+  use action changeDescription;
+
+  use association _Items { create; with draft; }
+}
+
+define behavior for ZDJ_C_TutorialItem
+ alias Item
+ use etag
+{
+
+  use update;
+  use delete;
+
+  use association _Header { with draft; }
+}

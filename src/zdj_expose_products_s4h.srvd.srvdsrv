@@ -1,0 +1,4 @@
+@EndUserText.label: 'Expose products via RFC'
+define service ZDJ_EXPOSE_PRODUCTS_S4H {
+  expose ZI_DJ_PRODUCTS_S4H;
+}

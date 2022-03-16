@@ -1,0 +1,5 @@
+CLASS zbp_dj_i_tutposheader DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zdj_i_tutposheader.
+ENDCLASS.
+
+CLASS zbp_dj_i_tutposheader IMPLEMENTATION.
+ENDCLASS.

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SKTD" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <KTD_OBJECT>
+    <NAME>ZDJ_TUTORIAL</NAME>
+    <TYPE>GENERAL_TEXT</TYPE>
+    <SOURCE_CONTENT_TYPE>02</SOURCE_CONTENT_TYPE>
+    <REF_OBJ_TYPE>DEVC</REF_OBJ_TYPE>
+    <REF_OBJ_NAME>ZDJ_TUTORIAL</REF_OBJ_NAME>
+    <ABAP_LANGUAGE_VERSION>X</ABAP_LANGUAGE_VERSION>
+    <CONTENT>
+     <item>
+      <NAME>ZDJ_TUTORIAL</NAME>
+      <LANGU>E</LANGU>
+      <COMPONENT_UUID>AjaJ4sxkHtymkTHV8Oaiaw==</COMPONENT_UUID>
+      <SOURCE_CONTENT>UGFja2FnZSBmb3IgQlRQIHR1dG9yaWFsLg==</SOURCE_CONTENT>
+     </item>
+    </CONTENT>
+   </KTD_OBJECT>
+  </asx:values>
+ </asx:abap>
+</abapGit>
