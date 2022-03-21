@@ -1,0 +1,11 @@
+@EndUserText.label: 'Authorisation Item Projection'
+@MappingRole: true
+define role ZDJ_C_TUTPOSITEM {
+    grant
+        select
+            on
+                ZDJ_C_TUTORIALITEM
+                    where
+                        inheriting conditions from entity ZDJ_I_TutposItem;
+                        
+}

@@ -1,11 +1,12 @@
-managed implementation in class zbp_dj_i_tutposheader unique;
+managed;
 strict;
 with draft;
 
 define behavior for ZDJ_I_TutposHeader alias TutposHeader
+implementation in class zbp_dj_i_tutposheader unique
 persistent table zdj_tut_pos_head
 lock master total etag ModifiedAt
-authorization master ( instance )
+authorization master ( global, instance )
 draft table zdj_tutpos_dhead
 etag master ModifiedAt
 {
@@ -22,14 +23,16 @@ etag master ModifiedAt
   {
     validation validateItemsExist;
     validation validateCurrency;
+    validation TutposItem~validateUnit;
   }
 
   field ( numbering : managed, readonly ) Id;
-  field ( readonly ) Creator, CreatedAt, Modificator, ModifiedAt, Status, PictureURL, OverallPrice;
+  field ( readonly ) Creator, CreatedAt, Modificator,
+    ModifiedAt, Status, PictureURL, OverallPrice;
   field ( mandatory ) Currency;
   field ( readonly : update ) Description;
 
-  action ( features : instance ) cancel result [1] $self;
+  action ( features : instance ) cancel result [1]  $self  ;
   action ( features : instance ) changeDescription parameter ZDJ_I_TutposInput result [1] $self;
 
   determination controlFieldsOnCreate on save { create; }
@@ -49,6 +52,7 @@ etag master ModifiedAt
 }
 
 define behavior for ZDJ_I_TutposItem alias TutposItem
+implementation in class zbp_dj_i_tutpositem unique
 persistent table zdj_tut_pos_item
 lock dependent by _Header
 authorization dependent by _Header
@@ -59,7 +63,7 @@ draft table zdj_tutpos_ditem
   delete;
 
   field ( numbering : managed, readonly ) Item;
-  field ( readonly ) Id, Price;//Currency
+  field ( readonly ) Id, Price;
   field ( mandatory ) Quantity, Unit, UnitPrice;
 
   association _Header { with draft; }

@@ -1,0 +1,11 @@
+@EndUserText.label: 'Authorisation Item'
+@MappingRole: true
+define role ZDJ_I_TUTPOSITEM {
+    grant
+        select
+            on
+                ZDJ_I_TUTPOSITEM
+                    where
+                        inheriting conditions from entity ZDJ_I_TutposHeader;
+                        
+}

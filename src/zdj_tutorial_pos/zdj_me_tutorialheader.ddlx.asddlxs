@@ -15,21 +15,24 @@
         imageUrl: 'PictureURL'
   },
   presentationVariant: [{
-    requestAtLeast: ['ModifiedAt'], 
-    sortOrder: [{ 
-        by: 'ModifiedAt', 
-        direction:  #DESC 
-    }], 
-    visualizations: [{type: #AS_LINEITEM}] 
+    requestAtLeast: ['ModifiedAt'],
+    sortOrder: [{
+        by: 'ModifiedAt',
+        direction:  #DESC
+    }],
+    visualizations: [{type: #AS_LINEITEM}]
   }]
 
 }
 annotate entity ZDJ_C_TutorialHeader with
 {
   @UI.facet: [
-    { id: 'details', purpose: #STANDARD, label: 'Details' , position: 2, type : #FIELDGROUP_REFERENCE, targetQualifier: 'details' },
-    { id: 'control', purpose: #HEADER, position: 3, type : #FIELDGROUP_REFERENCE,targetQualifier: 'control' },
-    { id: 'items', purpose: #STANDARD, label:'Items', position: 4, type : #LINEITEM_REFERENCE, targetElement: '_Items' }
+    { purpose: #STANDARD, label: 'Details', type : #FIELDGROUP_REFERENCE, targetQualifier: 'details'},
+    { purpose: #STANDARD, label:'Items', type : #LINEITEM_REFERENCE, targetElement: '_Items' },
+    
+    { purpose: #HEADER, type : #FIELDGROUP_REFERENCE,targetQualifier: 'control', position: 1},
+    { targetQualifier: 'status', type: #DATAPOINT_REFERENCE, purpose: #HEADER, position: 2 },
+    { targetQualifier: 'price', type: #DATAPOINT_REFERENCE, purpose: #HEADER, position: 3 }
   ]
   @UI.identification: [{ type: #FOR_ACTION, dataAction: 'changeDescription', label: 'Change Description' },{ type: #FOR_ACTION, dataAction: 'cancel', label: 'Cancel' }]
   @UI.lineItem: [{ position: 10, criticality: 'Criticality' }]
@@ -68,11 +71,19 @@ annotate entity ZDJ_C_TutorialHeader with
   @EndUserText.label: 'Modified At'
   @UI.selectionField: [{position: 10}]
   ModifiedAt;
-  @UI.fieldGroup: [{ qualifier: 'details' , position: 20 }]
+  @UI.dataPoint:{
+    title: 'Overall Price',
+    qualifier: 'price'
+  }
   @EndUserText.label: 'Overall Price'
   OverallPrice;
   @UI.lineItem: [{ position: 40 }]
   @EndUserText.label: 'Status Description'
+  @UI.dataPoint:{
+    title: 'Status',
+    qualifier: 'status',
+    criticality: 'Criticality'
+  }
   StatusText;
   @UI.hidden: true
   Criticality;

@@ -1,0 +1,11 @@
+@EndUserText.label: 'Authorization Header Projection'
+@MappingRole: true
+define role ZDJ_C_TUTORIALHEADER {
+    grant
+        select
+            on
+                ZDJ_C_TUTORIALHEADER
+                    where
+                        inheriting conditions from entity ZDJ_I_TutposHeader;
+                        
+}

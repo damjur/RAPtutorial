@@ -16,7 +16,28 @@
      <OBJECT>S_START</OBJECT>
      <OKFLAG>X</OKFLAG>
     </USOBX>
+    <USOBX>
+     <NAME>BDDDBCD43EA9D4F19265969BEF5987</NAME>
+     <TYPE>HT</TYPE>
+     <OBJECT>S_TABU_NAM</OBJECT>
+     <OKFLAG>Y</OKFLAG>
+    </USOBX>
    </USOBX>
+   <USOBT>
+    <USOBT>
+     <NAME>BDDDBCD43EA9D4F19265969BEF5987</NAME>
+     <TYPE>HT</TYPE>
+     <OBJECT>S_TABU_NAM</OBJECT>
+     <FIELD>ACTVT</FIELD>
+    </USOBT>
+    <USOBT>
+     <NAME>BDDDBCD43EA9D4F19265969BEF5987</NAME>
+     <TYPE>HT</TYPE>
+     <OBJECT>S_TABU_NAM</OBJECT>
+     <FIELD>TABLE</FIELD>
+     <LOW>ZDJ_TUT_POS_HEAD</LOW>
+    </USOBT>
+   </USOBT>
    <USOBX_EXT>
     <item>
      <OBJECT>S_START</OBJECT>
@@ -32,7 +53,34 @@
      <EXCEP_TX>Okay</EXCEP_TX>
      <EXCEP_ICON>@08@</EXCEP_ICON>
     </item>
+    <item>
+     <OBJECT>S_TABU_NAM</OBJECT>
+     <TTEXT>Table Access by Generic Standard Tools</TTEXT>
+     <OCLSS>BC_A</OCLSS>
+     <OKFLAG>Y</OKFLAG>
+     <DEVCLASS>SVIM</DEVCLASS>
+     <PS_POSID>BC-CUS-TOL-TME</PS_POSID>
+     <CI_TEXT>Check/Maintain</CI_TEXT>
+     <CH_TEXT>Check</CH_TEXT>
+     <PR_TEXT>Yes</PR_TEXT>
+     <EXCEP>3</EXCEP>
+     <EXCEP_TX>Okay</EXCEP_TX>
+     <EXCEP_ICON>@08@</EXCEP_ICON>
+    </item>
    </USOBX_EXT>
+   <USOBT_EXT>
+    <item>
+     <OBJECT>S_TABU_NAM</OBJECT>
+     <TTEXT>Table Access by Generic Standard Tools</TTEXT>
+     <FIELD>ACTVT</FIELD>
+    </item>
+    <item>
+     <OBJECT>S_TABU_NAM</OBJECT>
+     <TTEXT>Table Access by Generic Standard Tools</TTEXT>
+     <FIELD>TABLE</FIELD>
+     <LOW>ZDJ_TUT_POS_HEAD</LOW>
+    </item>
+   </USOBT_EXT>
   </asx:values>
  </asx:abap>
 </abapGit>

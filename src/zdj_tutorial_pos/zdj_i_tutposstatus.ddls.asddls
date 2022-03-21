@@ -1,6 +1,7 @@
-@AccessControl.authorizationCheck: #CHECK
+@AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Status Search Help'
 @Metadata.ignorePropagatedAnnotations: true
+@Search.searchable: true
 define view entity ZDJ_I_TutposStatus
   as select from DDCDS_CUSTOMER_DOMAIN_VALUE(
     p_domain_name:'ZDJ_DO_TUTPOS_STAT'

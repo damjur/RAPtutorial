@@ -1,4 +1,4 @@
-@AccessControl.authorizationCheck: #CHECK
+@AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Currency&Unit Converter for Receipt Item'
 @Metadata.ignorePropagatedAnnotations: true
 

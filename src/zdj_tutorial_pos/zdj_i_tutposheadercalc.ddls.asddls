@@ -1,4 +1,4 @@
-@AccessControl.authorizationCheck: #CHECK
+@AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Receipt Header with caluculated fields'
 
 define view entity ZDJ_I_TutposHeaderCalc

@@ -13,19 +13,6 @@
         }
   }
 }
-@UI.chart: [
-  {
-    title: 'Column chart for shape',
-    chartType: #COLUMN,
-    measures: [
-      'PRICE'
-    ],
-    dimensions: [
-       'DESCRIPTION'
-    ]
-  }
-]
-
 annotate entity ZDJ_C_TutorialItem with
 {
   @UI.facet: [

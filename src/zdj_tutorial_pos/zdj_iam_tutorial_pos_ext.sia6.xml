@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SIA6" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SIA6>
+    <MAIN_OBJECT>
+     <NAME>ZDJ_IAM_TUTORIAL_POS_EXT</NAME>
+     <TYPE>SIA6</TYPE>
+     <DESCRIPTION>IAM for ZDJ_UI_TUTPOS</DESCRIPTION>
+     <RESPONSIBLE>CB9980000000</RESPONSIBLE>
+     <MASTER_LANGUAGE>EN</MASTER_LANGUAGE>
+     <MASTER_SYSTEM>A4C</MASTER_SYSTEM>
+     <PACKAGE_REF>
+      <PACKAGE_NAME>ZDJ_TUTORIAL_POS</PACKAGE_NAME>
+     </PACKAGE_REF>
+    </MAIN_OBJECT>
+    <APP_ID>ZDJ_IAM_TUTORIAL_POS_EXT</APP_ID>
+    <APP_TYPE>EXT</APP_TYPE>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+    <UI_APP_ID>ZDJ_TUTORIAL_UI5R</UI_APP_ID>
+    <SERVICE>
+     <item>
+      <REL_NAME>ZDJ_UI_TUTPOS_UI_V4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZDJ_IAM_TUTORIAL_POS_EXT</APP_ID>
+      <SRVC_NAME>BDDDBCD43EA9D4F19265969BEF5987</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>Receipt Service (V4; UI)</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+    </SERVICE>
+    <AUTH>
+     <item>
+      <AUTH_OBJECT>S_TABU_NAM</AUTH_OBJECT>
+      <STATUS>G</STATUS>
+      <TEXT>Table Access by Generic Standard Tools</TEXT>
+      <AUTH_ITEM>
+       <item>
+        <AUTH_OBJECT>S_TABU_NAM</AUTH_OBJECT>
+        <AUTH_OBJECT_INSTANCE>0002</AUTH_OBJECT_INSTANCE>
+        <IBS_SOURCE>BDDDBCD43EA9D4F19265969BEF5987</IBS_SOURCE>
+        <IBS_SOURCE_TYPE>HT</IBS_SOURCE_TYPE>
+        <TEXT>Table Access by Generic Standard Tools</TEXT>
+        <STATUS>S</STATUS>
+        <INACTIVE>X</INACTIVE>
+        <VALUES>
+         <item>
+          <FIELD>ACTVT</FIELD>
+          <VALUES>
+           <item/>
+          </VALUES>
+          <TEXT>Activity</TEXT>
+          <STATUS>S</STATUS>
+          <IS_ACTVT>X</IS_ACTVT>
+         </item>
+         <item>
+          <FIELD>TABLE</FIELD>
+          <VALUE>ZDJ_TUT_POS_HEAD</VALUE>
+          <VALUES>
+           <item>
+            <LOW_VALUE>ZDJ_TUT_POS_HEAD</LOW_VALUE>
+           </item>
+          </VALUES>
+          <TEXT>Table Name in Authorization Field</TEXT>
+          <STATUS>S</STATUS>
+         </item>
+        </VALUES>
+       </item>
+       <item>
+        <AUTH_OBJECT>S_TABU_NAM</AUTH_OBJECT>
+        <AUTH_OBJECT_INSTANCE>0001</AUTH_OBJECT_INSTANCE>
+        <IBS_SOURCE>BDDDBCD43EA9D4F19265969BEF5987</IBS_SOURCE>
+        <IBS_SOURCE_TYPE>HT</IBS_SOURCE_TYPE>
+        <TEXT>Table Access by Generic Standard Tools</TEXT>
+        <STATUS>G</STATUS>
+        <VALUES>
+         <item>
+          <FIELD>ACTVT</FIELD>
+          <VALUE>Change, Display change documents, Display</VALUE>
+          <VALUES>
+           <item>
+            <LOW_VALUE>02</LOW_VALUE>
+           </item>
+           <item>
+            <LOW_VALUE>08</LOW_VALUE>
+           </item>
+           <item>
+            <LOW_VALUE>03</LOW_VALUE>
+           </item>
+          </VALUES>
+          <TEXT>Activity</TEXT>
+          <STATUS>G</STATUS>
+          <IS_ACTVT>X</IS_ACTVT>
+         </item>
+         <item>
+          <FIELD>TABLE</FIELD>
+          <VALUE>ZDJ_TUT_POS_HEAD</VALUE>
+          <VALUES>
+           <item>
+            <LOW_VALUE>ZDJ_TUT_POS_HEAD</LOW_VALUE>
+           </item>
+          </VALUES>
+          <TEXT>Table Name in Authorization Field</TEXT>
+          <STATUS>S</STATUS>
+         </item>
+        </VALUES>
+       </item>
+      </AUTH_ITEM>
+     </item>
+     <item>
+      <AUTH_OBJECT>ZDJAUTPSTA</AUTH_OBJECT>
+      <STATUS>U</STATUS>
+      <TEXT>Authorization based on status</TEXT>
+      <AUTH_ITEM>
+       <item>
+        <AUTH_OBJECT>ZDJAUTPSTA</AUTH_OBJECT>
+        <AUTH_OBJECT_INSTANCE>0001</AUTH_OBJECT_INSTANCE>
+        <TEXT>Authorization based on status</TEXT>
+        <STATUS>U</STATUS>
+        <VALUES>
+         <item>
+          <FIELD>ACTVT</FIELD>
+          <VALUE>Change</VALUE>
+          <VALUES>
+           <item>
+            <LOW_VALUE>02</LOW_VALUE>
+           </item>
+          </VALUES>
+          <TEXT>Activity</TEXT>
+          <STATUS>U</STATUS>
+          <IS_ACTVT>X</IS_ACTVT>
+         </item>
+         <item>
+          <FIELD>ZDJAFTPSTA</FIELD>
+          <VALUE>S</VALUE>
+          <VALUES>
+           <item>
+            <LOW_VALUE>S</LOW_VALUE>
+           </item>
+          </VALUES>
+          <TEXT>Receipt Status</TEXT>
+          <STATUS>U</STATUS>
+         </item>
+        </VALUES>
+       </item>
+      </AUTH_ITEM>
+     </item>
+    </AUTH>
+   </SIA6>
+  </asx:values>
+ </asx:abap>
+</abapGit>
