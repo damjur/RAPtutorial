@@ -37,37 +37,6 @@
       <AUTH_ITEM>
        <item>
         <AUTH_OBJECT>S_TABU_NAM</AUTH_OBJECT>
-        <AUTH_OBJECT_INSTANCE>0002</AUTH_OBJECT_INSTANCE>
-        <IBS_SOURCE>BDDDBCD43EA9D4F19265969BEF5987</IBS_SOURCE>
-        <IBS_SOURCE_TYPE>HT</IBS_SOURCE_TYPE>
-        <TEXT>Table Access by Generic Standard Tools</TEXT>
-        <STATUS>S</STATUS>
-        <INACTIVE>X</INACTIVE>
-        <VALUES>
-         <item>
-          <FIELD>ACTVT</FIELD>
-          <VALUES>
-           <item/>
-          </VALUES>
-          <TEXT>Activity</TEXT>
-          <STATUS>S</STATUS>
-          <IS_ACTVT>X</IS_ACTVT>
-         </item>
-         <item>
-          <FIELD>TABLE</FIELD>
-          <VALUE>ZDJ_TUT_POS_HEAD</VALUE>
-          <VALUES>
-           <item>
-            <LOW_VALUE>ZDJ_TUT_POS_HEAD</LOW_VALUE>
-           </item>
-          </VALUES>
-          <TEXT>Table Name in Authorization Field</TEXT>
-          <STATUS>S</STATUS>
-         </item>
-        </VALUES>
-       </item>
-       <item>
-        <AUTH_OBJECT>S_TABU_NAM</AUTH_OBJECT>
         <AUTH_OBJECT_INSTANCE>0001</AUTH_OBJECT_INSTANCE>
         <IBS_SOURCE>BDDDBCD43EA9D4F19265969BEF5987</IBS_SOURCE>
         <IBS_SOURCE_TYPE>HT</IBS_SOURCE_TYPE>
@@ -90,6 +59,37 @@
           </VALUES>
           <TEXT>Activity</TEXT>
           <STATUS>G</STATUS>
+          <IS_ACTVT>X</IS_ACTVT>
+         </item>
+         <item>
+          <FIELD>TABLE</FIELD>
+          <VALUE>ZDJ_TUT_POS_HEAD</VALUE>
+          <VALUES>
+           <item>
+            <LOW_VALUE>ZDJ_TUT_POS_HEAD</LOW_VALUE>
+           </item>
+          </VALUES>
+          <TEXT>Table Name in Authorization Field</TEXT>
+          <STATUS>S</STATUS>
+         </item>
+        </VALUES>
+       </item>
+       <item>
+        <AUTH_OBJECT>S_TABU_NAM</AUTH_OBJECT>
+        <AUTH_OBJECT_INSTANCE>0002</AUTH_OBJECT_INSTANCE>
+        <IBS_SOURCE>BDDDBCD43EA9D4F19265969BEF5987</IBS_SOURCE>
+        <IBS_SOURCE_TYPE>HT</IBS_SOURCE_TYPE>
+        <TEXT>Table Access by Generic Standard Tools</TEXT>
+        <STATUS>S</STATUS>
+        <INACTIVE>X</INACTIVE>
+        <VALUES>
+         <item>
+          <FIELD>ACTVT</FIELD>
+          <VALUES>
+           <item/>
+          </VALUES>
+          <TEXT>Activity</TEXT>
+          <STATUS>S</STATUS>
           <IS_ACTVT>X</IS_ACTVT>
          </item>
          <item>

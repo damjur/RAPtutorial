@@ -18,6 +18,12 @@
      <ENTRY>Business Partners</ENTRY>
      <LENGTH>27</LENGTH>
     </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>Partners</ENTRY>
+     <LENGTH>18</LENGTH>
+    </item>
    </TPOOL>
    <I18N_TPOOL>
     <item>
@@ -37,14 +43,6 @@
      <LANGUAGE>L</LANGUAGE>
     </item>
    </I18N_LINES>
-   <DESCRIPTIONS>
-    <SEOCOMPOTX>
-     <CLSNAME>ZCL_DJ_TUTORIAL_HELLO_WORLD</CLSNAME>
-     <CMPNAME>GET_PARTNERS</CMPNAME>
-     <LANGU>E</LANGU>
-     <DESCRIPT>Test3</DESCRIPT>
-    </SEOCOMPOTX>
-   </DESCRIPTIONS>
   </asx:values>
  </asx:abap>
 </abapGit>
