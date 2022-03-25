@@ -11,6 +11,14 @@
     <FIXPT>X</FIXPT>
     <UNICODE>X</UNICODE>
    </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZDJ_CL_TUTPOS_GEN2</CLSNAME>
+     <CMPNAME>DELETE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Test</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
   </asx:values>
  </asx:abap>
 </abapGit>

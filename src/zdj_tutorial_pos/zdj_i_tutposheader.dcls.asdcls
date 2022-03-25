@@ -6,7 +6,7 @@ define role ZDJ_I_TUTPOSHEADER {
             on
                 ZDJ_I_TUTPOSHEADER
                     where
-                        ( ) = aspect  pfcg_auth(S_TABU_NAM, 
+                        (  ) = aspect  pfcg_auth(S_TABU_NAM, 
                                 TABLE = 'ZDJ_TUT_POS_HEAD' , 
                                 ACTVT = '03' );
                         

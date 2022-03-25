@@ -16,6 +16,10 @@ CLASS zdj_cl_tutpos_gen2 DEFINITION
       RETURNING VALUE(proceed) TYPE abap_bool.
   PRIVATE SECTION.
 
+    "! <p class="shorttext synchronized" lang="en">Test</p>
+    "!
+    "! @parameter i_out | <p class="shorttext synchronized" lang="en">Test 1</p>
+    "! @parameter result | <p class="shorttext synchronized" lang="en">Test 2</p>
     METHODS delete
       IMPORTING
         i_out         TYPE REF TO if_oo_adt_classrun_out
