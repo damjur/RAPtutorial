@@ -43,6 +43,7 @@ bF8xMiAgfAoK</SOURCE_CONTENT>
       <COMPONENT_UUID>AjaJ4sxkHtyp0qlwLmmfyw==</COMPONENT_UUID>
       <COMPONENT_ID>ED7343C78767074C8B832CAEE62546AF4A505674</COMPONENT_ID>
       <COMPONENT_NAME>/sap/bc/adt/bo/behaviordefinitions/zdj_i_tutposheader/source/main#type=BDEF/BAC;name=ZDJ_I_TutposItem.recalcPriceInt</COMPONENT_NAME>
+      <SOURCE_CONTENT>VGVzdA==</SOURCE_CONTENT>
      </item>
      <item>
       <NAME>ZDJ_I_TUTPOSHEADER</NAME>
@@ -50,6 +51,7 @@ bF8xMiAgfAoK</SOURCE_CONTENT>
       <COMPONENT_UUID>AjaJ4sxkHtyp0qlwLmh/yw==</COMPONENT_UUID>
       <COMPONENT_ID>D71BCAF7A1B73ABF0CDCB4F86C37E9DD65AD76CF</COMPONENT_ID>
       <COMPONENT_NAME>/sap/bc/adt/bo/behaviordefinitions/zdj_i_tutposheader/source/main#type=BDEF/BAE;name=ZDJ_I_TutposHeader</COMPONENT_NAME>
+      <SOURCE_CONTENT>VGVzdA==</SOURCE_CONTENT>
      </item>
      <item>
       <NAME>ZDJ_I_TUTPOSHEADER</NAME>
